@@ -13,7 +13,7 @@ from keras.optimizers import SGD
 from keras import regularizers
 
 input_units = 784
-hidd1_units= 500        #number of units in the first hidden layer
+hidd1_units= 1000        #number of units in the first hidden layer
 output1_units = input_units
 nb_classes = 10
 
@@ -82,7 +82,7 @@ enc1_acts= np.maximum(enc1_pre_acts, 0, enc1_pre_acts)  #enc1 activations here
 ae_module2_input= enc1_acts.transpose()
 #Set auto encoder 2 parameters
 enc2_input_units = hidd1_units
-hidd2_units= 400                #number of units in the second hidden layer
+hidd2_units= 1000                #number of units in the second hidden layer
 output2_units = enc2_input_units
 
 #Define AE_module2 architecture
@@ -132,7 +132,7 @@ enc2_acts= np.maximum(enc2_pre_acts, 0, enc2_pre_acts)  #enc1 activations here
 ae_module3_input= enc2_acts.transpose()
 #Set auto encoder 2 parameters
 enc3_input_units = hidd2_units
-hidd3_units= 300            #number of units in the third hidden layer
+hidd3_units= 1000            #number of units in the third hidden layer
 output3_units = enc3_input_units
 
 #Define AE_module2 architecture

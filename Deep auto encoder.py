@@ -33,7 +33,6 @@ Y_test = np_utils.to_categorical(y_test, nb_classes)
 #AE_module1
 ae_module1 = Sequential()
 ae_module1.add(Dense(hidd1_units, input_dim=input_units, init='uniform', activation='relu'))
-ae_module1.add(Dropout(0.2))
 ae_module1.add(Dense(output1_units, activation='sigmoid'))
 ae_module1.compile(loss='mse', optimizer='adam', metrics=['accuracy'])
 ae_module1.fit(X_train, X_train, nb_epoch=30, batch_size=100, shuffle=True)

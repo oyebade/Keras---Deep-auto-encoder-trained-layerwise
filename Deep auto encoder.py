@@ -44,23 +44,12 @@ g1=ae_module1.get_config()
 h1=ae_module1.get_weights()
 
 #Note here that enc is hidden layer and dec is output layer
-#print(np.ndim(h))
-#print(np.shape(h))
 enc1_w= h1[0]
 enc1_bias_w= h1[1]
 enc1_dec1_w= h1[2]
 dec1_bias_w= h1[3]
-print(np.shape(enc1_w))
-print(np.shape(enc1_bias_w))
-print(np.shape(enc1_dec1_w))
-print(np.shape(dec1_bias_w))
-print(np.ndim(enc1_w))
-print(np.ndim(enc1_bias_w))
-
 #concatenate horizonatlly as array list module1 enc1 and enc1_bias weights
 enc1_with_bias_w= [(enc1_w), (enc1_bias_w)]     #keep this for deep model fine-tuning
-#print(np.shape(enc1_with_bias_w))
-
 enc1_w_trans= enc1_w.transpose()    #transpose enc1 weights
 #get shape for enc1 bias from input data size
 #Note that by default (originally), input data has samples as rows and attributes as columns
@@ -69,7 +58,6 @@ enc1_w_trans= enc1_w.transpose()    #transpose enc1 weights
 enc1_bias_inp = np.ones((1,y1), dtype= np.int)
 #compute the pre-activations of enc1, including bias contribution
 enc1_pre_acts = np.matmul(enc1_w_trans, X_train.transpose()) + np.outer(enc1_bias_w, enc1_bias_inp)
-#print(np.shape(enc1_acts))
 
 #Pass enc1 pre-activations through activation function to obtain enc1 activations
 #Here list the common activation functions implementation in numpy
@@ -102,8 +90,6 @@ g2=ae_module2.get_config()
 h2=ae_module2.get_weights()
 
 #Note here that enc is hidden layer and dec is output layer
-#print(np.ndim(h))
-#print(np.shape(h))
 enc2_w= h2[0]
 enc2_bias_w= h2[1]
 enc2_dec2_w= h2[2]
@@ -111,8 +97,6 @@ dec2_bias_w= h2[3]
 
 #concatenate horizonatlly as array list module1 enc and bias weights
 enc2_with_bias_w= [(enc2_w), (enc2_bias_w)]     #keep this for deep model fine-tuning
-#print(np.shape(enc1_with_bias_w))
-
 enc2_w_trans= enc2_w.transpose()    #transpose enc1 weights
 #get shape for enc2 bias from input data size
 #Note that by default (originally), input data has samples as rows and attributes as columns

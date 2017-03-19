@@ -1,6 +1,6 @@
 ####This code trains a 3-hidden layer deep auto encoder in a greedy layerwise fashion; then transfers the encoder weights for initializing...
 ####the corresponding 3-hidden layer MLP
-####Note that this program employ dropout only for pre-training (greedy layerwise training)
+####Note that this program employs dropout criterion only for pre-training (greedy layerwise training)
 
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Activation

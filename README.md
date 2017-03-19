@@ -1,6 +1,6 @@
 # Keras---Deep-auto-encoder-trained-layerwise
 The project codes up a three hidden layer deep auto encoder, trained in a greedy layerwise fashion for initializing a corresponding deep neural network.
-The codes for the auto encoders along with the different training criteria for learning improved representations are have been inspired by the following listed references.
+The codes for the auto encoders along with the different training criteria for learning improved representations have been inspired by the following listed references.
 
 (1) Vincent, P., Larochelle, H., Lajoie, I., Bengio, Y., & Manzagol, P. A. (2010). Stacked denoising autoencoders: Learning useful representations in a deep network with a local denoising criterion. Journal of Machine Learning Research, 11(Dec), 3371-3408.
 
